@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        form{
+            width: max-content;
+            margin: auto;
+            margin-top: 5%;
+        }
+
+        input{
+            width: 100%;
+
+        }
+
+        input::-webkit-calendar-picker-indicator {
+              opacity: 100;
+           }
+        
+        textarea{
+            width: 100%;
+        }
+        legend{
+            font-weight: bolder;
+            font-size: 25px;
+          
+        }
+
+        fieldset{
+            margin-bottom: 20px;
+            padding-right: 18px;
+        }
+
+        button{
+            width: 80px;
+            min-height: fit-content;
+            height: 60px;
+        }
+
+        #lista{
+            width: 50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <p><label for="nombre">Nombre:</label></p>
+            <input type="text" id="nombre">
+            <p><label for="edad">Edad:</label></p>
+            <input type="number" id="edad">
+            <p><label for="direccion">Dirección:</label></p>
+            <input type="email" id="direccion">
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>Datos de tu ordenador</legend>
+            <p><label for="modelo">Modelo del ordenador:</label></p>
+            <input type="text" id="modelo">
+
+            <br /> <br />
+
+          <label for="datalist">Sistema que te da el problema:</label>
+          <input list="datalist" value="CPU" id="lista">
+            <datalist id="datalist" name="datalist">
+                <option value="CPU"></option>
+                <option value="CPU2"></option>
+            </datalist>
+
+        </fieldset>
+
+
+
+
+        <fieldset>
+            <legend>Descripción del problema</legend>
+                <textarea name="problema" id="" cols="70" rows="10"></textarea>
+        </fieldset>
+
+        <button>Enviar</button>
+
+    </form>
+
+</body>
+
+</html>
