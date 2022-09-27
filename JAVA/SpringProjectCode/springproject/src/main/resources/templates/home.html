@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td,tr,th,table{
+            border: black 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello to my Home!</h1>
+    <p th:text="${personaUno}"></p>
+    <p th:text="${personaDos}"></p>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+        </tr>
+
+        <tr th:each="alumno: ${alumnos}">
+            <td th:text="${alumno.id}"></td>
+            <td th:text="${alumno.Nombre}"></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
