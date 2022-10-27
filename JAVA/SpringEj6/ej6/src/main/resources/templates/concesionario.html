@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+        </tr>
+
+        <tr th:each="coche:${coches}">
+            <td th:text="${coche.marca}"></td>
+            <td th:text="${coche.modelo}" ></td>
+            <td th:text="${coche.precio} + ' ' + €"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>
