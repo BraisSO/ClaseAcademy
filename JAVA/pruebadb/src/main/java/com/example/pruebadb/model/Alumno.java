@@ -77,6 +77,10 @@ public class Alumno {
         this.nota = nota;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     
 
 }
