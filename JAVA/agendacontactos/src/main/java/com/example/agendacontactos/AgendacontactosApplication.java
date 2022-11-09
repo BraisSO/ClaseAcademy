@@ -1,13 +1,13 @@
-package com.example.cookies;
+package com.example.agendacontactos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CookiesApplication {
+public class AgendacontactosApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CookiesApplication.class, args);
+		SpringApplication.run(AgendacontactosApplication.class, args);
 	}
 
 }
