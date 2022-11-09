@@ -4,15 +4,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.ej8.model.Inmuebles;
 import com.example.ej8.service.InmobiliariaService;
 
 @Controller
+@RequestMapping
 public class FormController {
 
     @Autowired
-    InmobiliariaService inmobiliariaService;
+   private InmobiliariaService inmobiliariaService;
     
     @GetMapping("/form")
     public String form(Model model){
@@ -21,13 +24,10 @@ public class FormController {
     }
     
 
-    @GetMapping("/guardar")
+    @PostMapping("/guardar")
         public String guardar(Inmuebles inmueble){
             inmobiliariaService.gardarInmueble(inmueble);
             return "redirect:/form";
         }
     }
-//falta vincular o de gardar o formulario
-// Esto faciase creando unha instancia vacia e enchendoa cos campos do formulario e logo usando a funcion de gardar
-//o form ten que estar vinculado a funcion de guardar e pasarlle os datos vinculados o obxeto vacio
 

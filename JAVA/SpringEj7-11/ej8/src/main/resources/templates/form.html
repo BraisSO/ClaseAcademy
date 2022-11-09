@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="@{/guardar}" method="get"></form>
+    <form th:action="@{/guardar}" method="post" th:object="${inmueble}">
+        <input type="number" name="metrosCuadrados" placeholder="m2" th:field="*{metrosCuatrados}">
+        <input type="number" name="precio" placeholder="precio" th:field="*{precio}">
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
