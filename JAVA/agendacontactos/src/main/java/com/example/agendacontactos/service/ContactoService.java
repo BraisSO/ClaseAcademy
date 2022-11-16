@@ -29,7 +29,11 @@ public class ContactoService {
     public void eliminarContacto(Long id){
         contactoRepository.deleteById(id);
     }
-
+    
+    public List<Contacto> buscarContactoNombre(String nombre){
+        return contactoRepository.findByNombre(nombre);
+    }
+   
 
 
 

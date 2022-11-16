@@ -1,10 +1,7 @@
 package com.example.agendacontactos.controller;
 
 import java.util.List;
-
-import org.hibernate.query.criteria.internal.expression.ConcatExpression;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.StreamingHttpOutputMessage.Body;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -55,5 +52,10 @@ public class ContactoController {
      @DeleteMapping("/{id}")
      public void eliminar(@PathVariable Long id){
         contactoService.eliminarContacto(id);
+     }
+
+    @GetMapping("/buscar-nombre/{nombre}")
+     public List<Contacto> findPorNombre(@PathVariable String nombre){
+        return contactoService.buscarContactoNombre(nombre);
      }
 }
