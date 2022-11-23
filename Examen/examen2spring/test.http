@@ -1,0 +1,9 @@
+
+###Listar viviendas
+GET http://localhost:8080/api/vivienda/list
+
+###Listar viviendas por localidad
+GET http://localhost:8080/api/viviendaa/boiro
+
+###Listar viviendas por id
+GET http://localhost:8080/api/vivienda/1

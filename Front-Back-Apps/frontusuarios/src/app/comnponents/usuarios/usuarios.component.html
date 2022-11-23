@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <td>Id</td>
+        <td>Nombre</td>
+        <td>Apellido1</td>
+        <td>Apellido2</td>
+        <td>Edad</td>
+        <td>Profesion</td>
+    </tr>
+
+    <tr *ngFor="let usuario of usuarios">
+        <td>{{usuario.id}}</td>
+        <td>{{usuario.nombre}}</td>
+        <td>{{usuario.apellidoUno}}</td>
+        <td>{{usuario.apellidoDos}}</td>
+        <td>{{usuario.edad}}</td>
+        <td>{{usuario.profesion}}</td>
+    </tr>
+    
+</table>

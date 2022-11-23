@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stickman</title>
+    
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="600" style="background-color: #000000;"></canvas>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(200, 100, 60, 0, 2 * Math.PI);
+        ctx.fillStyle = "white";
+        ctx.fill();
+        ctx.stroke();
+
+        //cuerpo
+        ctx.beginPath();       
+        ctx.fillStyle='white';
+        ctx.fillRect(195,158,10,200);
+        ctx.fill();
+        ctx.stroke();
+
+        //brazos
+        ctx.beginPath();       
+        ctx.moveTo(200, 180);
+        ctx.lineTo(135, 270);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle='white'
+        ctx.stroke();
+
+        ctx.beginPath();       
+        ctx.moveTo(200, 180);
+        ctx.lineTo(265, 270);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle='white'
+        ctx.stroke();
+
+        //piernas
+        ctx.beginPath();       
+        ctx.moveTo(200, 350);
+        ctx.lineTo(250, 490);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle='white'
+        ctx.stroke();
+        
+        ctx.beginPath();       
+        ctx.moveTo(200, 350);
+        ctx.lineTo(150, 490);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle='white'
+        ctx.stroke();
+
+        //ojos
+        ctx.beginPath();
+        ctx.arc(180, 90, 15, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(218, 90, 15, 0, 2 * Math.PI);
+        ctx.fillStyle = "red";
+        ctx.fill();
+        ctx.stroke();
+
+        //boca
+        ctx.beginPath();
+        ctx.arc(200, 100, 40, 0, 1 * Math.PI);
+        ctx.fillStyle = "white";
+        ctx.strokeStyle='red'
+        ctx.lineWidth=5;
+        ctx.fill();
+        ctx.stroke();
+
+
+     
+        </script>
+    
+</body>
+</html>

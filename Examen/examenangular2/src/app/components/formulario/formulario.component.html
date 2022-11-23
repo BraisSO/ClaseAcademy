@@ -1,0 +1,28 @@
+<form (submit)="envioFormulario()" class="text-center mt-5">
+    <input type="text" name="nombre" placeholder="nombre" [(ngModel)]="nombre">
+    <input type="text" name="apellidos" placeholder="apellidos" [(ngModel)]="apellido">
+    <input type="number" name="edad" [(ngModel)]="edad">
+    <input type="text" name="profesion" placeholder="profesion" [(ngModel)]="profesion">
+    <button type="submit" class="btn-primary">Enviar</button>
+</form>
+
+<p>
+</p>
+
+<table *ngIf="table==true" class="table m-auto w-50">
+    <tr>
+        <td>Nombre</td>
+        <td>Apellidos</td>
+        <td>Edad</td>
+        <td>Profesion</td>
+        <td>Eliminar</td>
+    </tr>
+
+    <tr *ngFor="let persona of personas index as i">
+        <td>{{persona.nombre}}</td>
+        <td>{{persona.apellido}}</td>
+        <td>{{persona.edad}}</td>
+        <td>{{persona.profesion}}</td>
+        <td><a (click)="eliminar(i)"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+    </tr>
+</table>
