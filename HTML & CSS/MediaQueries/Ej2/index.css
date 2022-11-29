@@ -1,0 +1,78 @@
+nav {
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+
+}
+
+.hamburguesa {
+    display: none;
+
+}
+
+div {
+    padding-left: 30px;
+    text-align: center;
+
+
+}
+
+section {
+    display: flex;
+    height: 80vh;
+
+}
+
+article {
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: gray;
+    color: white;
+    width: 70%;
+}
+
+aside {
+    padding-top: 10px;
+    padding-left: 10px;
+    background-color: rgb(171, 177, 177);
+    color: white;
+    width: 30%;
+
+}
+
+footer {
+    display: flex;
+    background-color: rgba(34, 25, 25, 0.678);
+    color: azure;
+    justify-content: center;
+    height: 10vh;
+    align-items: center;
+}
+
+
+
+@media(max-width:700px) {
+
+    article {
+        width: 100%;
+    }
+
+    div {
+        display: none;
+    }
+
+    .hamburguesa {
+        display: flex;
+        padding-left: 30px;
+        text-align: center;
+    }
+
+    aside {
+        display: none;
+    }
+
+
+}
