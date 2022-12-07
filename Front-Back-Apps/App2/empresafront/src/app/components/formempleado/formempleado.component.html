@@ -1,0 +1,17 @@
+
+
+    <div class="container mt-5">
+        <div class="card p-4 me-auto ms-auto w-50">
+            <form (submit)="save()">
+                <input type="text" name="nombre" class="form-control my-2" placeholder="Nombre" [(ngModel)]="nombre">
+                <input type="text" name="apellidos" class="form-control my-2"  placeholder="Apellidos" [(ngModel)]="apellidos">
+                <select name="departamentos" class="form-select" [(ngModel)]="opcion">
+                    <option *ngFor="let departamento of departamentos" [value]="departamento.id" >{{departamento.nombreDepartamento}}</option>
+                </select>
+
+                <button type="submit" class="btn btn-primary form-control mb-2">Guardar</button>
+            </form>
+        </div>
+    </div>
+
+

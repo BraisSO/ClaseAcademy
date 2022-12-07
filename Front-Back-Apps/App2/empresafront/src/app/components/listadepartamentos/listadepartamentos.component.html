@@ -1,0 +1,17 @@
+<div class="container mt5">
+
+    <table class="table table-bordered table-striped w-50 ms-auto me-auto text-center">
+        <thead>
+            <tr>
+             <th>Departamento</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let departamento of departamentos">
+                <td>{{departamento.nombreDepartamento}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
