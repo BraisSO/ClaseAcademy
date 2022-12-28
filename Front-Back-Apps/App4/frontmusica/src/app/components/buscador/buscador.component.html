@@ -1,0 +1,22 @@
+<form>
+    <input type="text" name="buscador" [(ngModel)]="buscarNombre">
+    <input type="submit" (click)="buscar()">
+</form>
+
+
+<table>
+    <tr>
+        <td>Autor</td>
+        <td>Discos</td>
+    </tr>
+    <tr *ngFor="let banda of bandas">
+        <td>{{banda.nombre}}</td>
+
+        <td>
+            <span *ngFor="let albums of banda.albums">
+                {{albums.nombre}}
+                <br>
+            </span>
+        </td>
+    </tr>
+</table>

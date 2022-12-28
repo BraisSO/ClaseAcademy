@@ -1,0 +1,18 @@
+<p>Gardar Banda</p>
+<form (submit)="saveBanda()">
+<input type="text" name="nombre" [(ngModel)]="nombreBanda">
+<input type="submit">
+</form>
+
+
+<p>Gardar disco</p>
+<form (submit)="saveDisco()">
+<input type="text" name="nombre" [(ngModel)]="nombreDisco">
+<input type="number" name="ano" [(ngModel)]="ano">
+<select name="seleccion" [(ngModel)]="seleccion">
+    <option *ngFor="let banda of bandas" [value]="banda.id" >{{banda.nombre}}</option>
+</select>
+<input type="submit">
+</form>
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador</title>
+</head>
+<body>
+    <form (submit)="buscarUsuario()">
+    <input type="text" name=username  placeholder="Bucar" [(ngModel)]="username" +
+    (keyup)="realTimeBuscador()">
+    <button type="submit">Buscar</button>
+    </form>
+
+    <br><br>
+
+    <table *ngIf="usuariosEncontrados.length>0;else notfound">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Teléfono</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuariosE of usuariosEncontrados">
+                <td>{{usuariosE.username}}</td>
+                <td>{{usuariosE.telefono}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-template #notfound>
+        <p>Sin resultados</p>
+    </ng-template>
+
+</body>
+</html>
