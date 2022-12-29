@@ -1,14 +1,14 @@
 <p>Gardar Banda</p>
 <form (submit)="saveBanda()">
-<input type="text" name="nombre" [(ngModel)]="nombreBanda">
+<input type="text" name="nombre" [(ngModel)]="banda.nombre">
 <input type="submit">
 </form>
 
 
 <p>Gardar disco</p>
 <form (submit)="saveDisco()">
-<input type="text" name="nombre" [(ngModel)]="nombreDisco">
-<input type="number" name="ano" [(ngModel)]="ano">
+<input type="text" name="nombre" [(ngModel)]="disco.nombre">
+<input type="number" name="ano" [(ngModel)]="disco.ano">
 <select name="seleccion" [(ngModel)]="seleccion">
     <option *ngFor="let banda of bandas" [value]="banda.id" >{{banda.nombre}}</option>
 </select>
@@ -41,7 +41,7 @@
 
 <p>Editar Nombre Banda</p>
 <form (submit)="editarBanda(seleccion)">
-    <input type="text" name="nombre" [(ngModel)]="nombreBanda">
+    <input type="text" name="nombre" [(ngModel)]="banda.nombre">
     <select name="seleccion" [(ngModel)]="seleccion">
         <option *ngFor="let banda of bandas" [value]="banda.id">{{banda.nombre}}</option>
     </select>
@@ -51,7 +51,7 @@
 
 <p>Editar Nombre Disco</p>
 <form (submit)="editarDisco(seleccionDisco)">
-    <input type="text" name="nombre" [(ngModel)]="nombreDisco">
+    <input type="text" name="nombre" [(ngModel)]="disco.nombre">
     <select name="seleccionDisco" [(ngModel)]="seleccionDisco">
         <option *ngFor="let disco of discos" [value]="disco.id" >{{disco.nombre}}</option>
     </select>    

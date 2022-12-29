@@ -12,17 +12,13 @@ import { DiscoService } from 'src/app/services/disco.service';
 })
 export class FormularioComponent implements OnInit {
 
-nombreBanda="";
-nombreDisco="";
-ano=0;
 seleccion=0;
 seleccionDisco=0;
 bandas:any=[];
 discos:any=[];
-nombreEditar="";
 
-nuevaBanda:Banda= new Banda();
-nuevoDisco:Disco= new Disco();
+banda:Banda= new Banda();
+disco:Disco= new Disco();
 
   constructor(private discoService:DiscoService, private bandaService:BandaService, private router:Router) { }
 
@@ -46,17 +42,13 @@ nuevoDisco:Disco= new Disco();
   }
 
 saveBanda(){
-  this.nuevaBanda.nombre=this.nombreBanda;
-  this.bandaService.guardarBanda(this.nuevaBanda).subscribe()
+  this.bandaService.guardarBanda(this.banda).subscribe()
   
 }
 
 saveDisco(){
-  this.nuevoDisco.nombre=this.nombreDisco;
-  this.nuevoDisco.año=this.ano;
-  this.nuevoDisco.banda.id=(Number)(this.seleccion);
-
- this.discoService.guardarDisco(this.nuevoDisco).subscribe(res=> console.log(res));
+ this.disco.banda.id=(Number)(this.seleccion);
+ this.discoService.guardarDisco(this.disco).subscribe(res=> console.log(res));
  
 }
 
@@ -72,23 +64,16 @@ eliminarDisco(id:number){
   })
 }
 
-
 editarBanda(id:number){
-  this.nuevaBanda.nombre=this.nombreBanda;
-  this.bandaService.editarBanda(id, this.nuevaBanda).subscribe(res=>{
+  this.bandaService.editarBanda(id, this.banda).subscribe(res=>{
     console.log(res);
   })
 }
 
 editarDisco(id:number){
-  this.nuevoDisco.nombre=this.nombreDisco;
-  this.discoService.editarDisco(id, this.nuevoDisco).subscribe(res=>{
+  this.discoService.editarDisco(id, this.disco).subscribe(res=>{
     console.log(res);
   })
 }
-
-
-
-
 
 }
