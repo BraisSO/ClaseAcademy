@@ -28,5 +28,13 @@ export class BandaService {
       return this.http.get(this.URL+"/listar-bandas");
     }
 
+    eliminarBanda(id:number){
+      return this.http.delete<Banda>(this.URL+'/eliminarBanda-'+id);
+    }
+
+    editarBanda(id:number, banda:Banda){
+      return this.http.put<Banda>(this.URL+'/modificarBanda/'+id,banda,{headers:this.httpHeaders});
+    }
+
 
 }

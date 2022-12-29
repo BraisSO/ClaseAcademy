@@ -26,4 +26,12 @@ public class BandaService {
         return bandaRepository.findByNombre(nombre);
     }
 
+    public void eliminarPorId(Long id){
+        bandaRepository.deleteById(id);
+    }
+
+    public Banda buscarPorId(Long id){
+        return bandaRepository.findById(id).orElse(null);
+    }
+
 }

@@ -16,3 +16,46 @@
 </form>
 
 
+<p>Eliminar Banda</p>
+<form >
+<select name="seleccion" [(ngModel)]="seleccion">
+    <option *ngFor="let banda of bandas" [value]="banda.id" >{{banda.nombre}}</option>
+</select>
+
+<button (click)="eliminarBanda(seleccion)">Eliminar</button>
+
+</form>
+
+
+
+<p>Eliminar Disco</p>
+<form >
+<select name="seleccionDisco" [(ngModel)]="seleccionDisco">
+    <option *ngFor="let disco of discos" [value]="disco.id" >{{disco.nombre}}</option>
+</select>
+
+<button (click)="eliminarDisco(seleccionDisco)">Eliminar</button>
+
+</form>
+
+
+<p>Editar Nombre Banda</p>
+<form (submit)="editarBanda(seleccion)">
+    <input type="text" name="nombre" [(ngModel)]="nombreBanda">
+    <select name="seleccion" [(ngModel)]="seleccion">
+        <option *ngFor="let banda of bandas" [value]="banda.id">{{banda.nombre}}</option>
+    </select>
+
+<input type="submit">
+</form>
+
+<p>Editar Nombre Disco</p>
+<form (submit)="editarDisco(seleccionDisco)">
+    <input type="text" name="nombre" [(ngModel)]="nombreDisco">
+    <select name="seleccionDisco" [(ngModel)]="seleccionDisco">
+        <option *ngFor="let disco of discos" [value]="disco.id" >{{disco.nombre}}</option>
+    </select>    
+
+<input type="submit">
+</form>
+

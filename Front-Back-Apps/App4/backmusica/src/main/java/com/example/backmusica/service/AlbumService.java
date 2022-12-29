@@ -24,5 +24,13 @@ public class AlbumService {
         return albumRepository.findAll();
     }
 
+    public void deleteById(Long id){
+        albumRepository.deleteById(id);
+    } 
+
+    public Album encontrarPorId(Long id){
+        return albumRepository.findById(id).orElse(null);
+    }
+
     
 }

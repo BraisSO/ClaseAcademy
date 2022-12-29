@@ -16,7 +16,10 @@ nombreBanda="";
 nombreDisco="";
 ano=0;
 seleccion=0;
+seleccionDisco=0;
 bandas:any=[];
+discos:any=[];
+nombreEditar="";
 
 nuevaBanda:Banda= new Banda();
 nuevoDisco:Disco= new Disco();
@@ -25,12 +28,20 @@ nuevoDisco:Disco= new Disco();
 
   ngOnInit(): void {
     this.listaBandas();
+    this.listarDiscos();
   }
 
   listaBandas(){
     this.bandaService.listarBandas().subscribe(res=>{
       console.log(res)
       this.bandas=res;
+    })
+  }
+
+  listarDiscos(){
+    this.discoService.listarDiscos().subscribe(res=>{
+      console.log(res);
+      this.discos=res;
     })
   }
 
@@ -48,5 +59,36 @@ saveDisco(){
  this.discoService.guardarDisco(this.nuevoDisco).subscribe(res=> console.log(res));
  
 }
+
+eliminarBanda(id:number){
+  this.bandaService.eliminarBanda(id).subscribe(res=>{
+    console.log(res)
+  })
+}
+
+eliminarDisco(id:number){
+  this.discoService.eliminarDisco(id).subscribe(res=>{
+    console.log(res)
+  })
+}
+
+
+editarBanda(id:number){
+  this.nuevaBanda.nombre=this.nombreBanda;
+  this.bandaService.editarBanda(id, this.nuevaBanda).subscribe(res=>{
+    console.log(res);
+  })
+}
+
+editarDisco(id:number){
+  this.nuevoDisco.nombre=this.nombreDisco;
+  this.discoService.editarDisco(id, this.nuevoDisco).subscribe(res=>{
+    console.log(res);
+  })
+}
+
+
+
+
 
 }
