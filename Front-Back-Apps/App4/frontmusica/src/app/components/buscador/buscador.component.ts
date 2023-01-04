@@ -18,7 +18,7 @@ export class BuscadorComponent implements OnInit {
 
 
   buscar(){
-    this.bandaService.buscarUsername(this.buscarNombre).subscribe(res=>{
+    this.bandaService.buscarNombre(this.buscarNombre).subscribe(res=>{
       console.log(res)
       this.bandas=res;
     });

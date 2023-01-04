@@ -15,7 +15,7 @@ export class BandaService {
   constructor(private http:HttpClient) { }
 
 
-    buscarUsername(nombre:string):Observable<Banda>{
+    buscarNombre(nombre:string):Observable<Banda>{
       return this.http.get<Banda>(this.URL+"/nombre/"+nombre);
     }
 
