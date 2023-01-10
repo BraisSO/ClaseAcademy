@@ -1,0 +1,7 @@
+.globalContainer{
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    margin: auto;
+
+}
