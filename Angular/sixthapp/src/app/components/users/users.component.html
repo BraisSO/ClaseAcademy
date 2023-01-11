@@ -1,0 +1,33 @@
+<form>
+    <button type="button" (click)="imprimirUsuarios()">Usuarios</button>
+</form>
+
+<div id="lista">
+<ul  *ngFor="let user of users">
+    <li>Name: {{user.id}}</li>
+    <li>Username: {{user.name}}</li>
+    <li>Email: {{user.username}}</li>
+    <li>Adress:  </li>
+        <ul>
+            <li>Street: {{user.address.street}}</li>
+            <li>Suite: {{user.address.suite}}</li>
+            <li>City: {{user.address.city}}</li>
+            <li>Zipcode: {{user.address.zipcode}}</li>
+            <li>Geo:</li>
+                <ul>
+                <li>lat: {{user.address.geo.lat}}</li>
+                <li>lng: {{user.address.geo.lng}}</li>
+                </ul>
+        </ul>
+
+        <li>phone: {{user.phone}}</li>
+        <li>website: {{user.website}}</li>
+        <li>Company:</li>
+        <ul>
+            <li>name: {{user.company.name}}</li>
+            <li>catchPhrase: {{user.company.catchPhrase}}</li>
+            <li>bs: {{user.company.bs}}</li>
+        </ul>
+        <hr>
+</ul>
+</div>

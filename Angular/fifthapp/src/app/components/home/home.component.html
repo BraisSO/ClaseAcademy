@@ -1,0 +1,7 @@
+<form class="text-center mt-5" >
+    <input type="text" name="texto" [(ngModel)]="texto" autocomplete="off">
+
+    <span *ngIf="texto!=''">
+    <div  [ngStyle]="{border: '1px solid red'}" class="m-auto w-50 p-4 mt-4"> {{texto}}</div>
+    </span>
+</form>

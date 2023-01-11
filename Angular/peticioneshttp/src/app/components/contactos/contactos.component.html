@@ -1,0 +1,6 @@
+<form (change)="getSelect()">
+<select name="contacto" [(ngModel)]="contacto">
+    <option value="Seleccionar Contacto">Who is more handsome?</option>
+    <option *ngFor="let contacto of contactos" [value]="contacto.id" >{{contacto.nombre}}</option>
+</select>
+</form>

@@ -1,0 +1,18 @@
+    <table class="m-auto" *ngIf="visible==true" >
+<tr>
+   <th>Nombre</th>
+   <th>Antigüedad</th>
+   <th>Salario</th>
+</tr>
+<tr *ngFor="let empleado of empleados">
+    <td>{{empleado.nombre}}</td>
+    <td>{{empleado.antiguedad}}</td>
+    <td>{{empleado.salario}}</td>
+</tr>
+</table>
+
+<div class="m-auto text-center">
+<button class="btn btn-danger" (click)="mostrarOcultar()" *ngIf="visible==true">Mostrar tabla</button>
+<button class="btn btn-danger mt-5" (click)="mostrarOcultar()" *ngIf="visible==false">Ocultar</button>
+</div>
+

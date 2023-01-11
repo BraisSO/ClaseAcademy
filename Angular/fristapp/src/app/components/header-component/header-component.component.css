@@ -1,0 +1,12 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15%;
+    margin-left: 3.5%;
+
+}
+
+header>div{
+    display: flex;
+    align-items: baseline;
+}
