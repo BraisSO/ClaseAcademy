@@ -15,4 +15,4 @@
 10. Typescript
 
 
-![alt](https://https://www.maas-marketing.co.uk/wp-content/uploads/2021/08/Copy-of-SoftwareONE-Academy-logo-white-1.png)
+![Imagen Academy](https://media.licdn.com/dms/image/C4D0BAQE5-nPHjzPBfw/company-logo_200_200/0/1621602700000?e=2147483647&v=beta&t=5B35Y1jLrE4eV6yww_s-dsOWiPBL9wKKqFF0WS0aS0Q)
