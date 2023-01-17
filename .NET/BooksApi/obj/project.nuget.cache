@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DSprnenrODdCPHaThl19zjajBsuv7yLJ3fjSWQs2lTERyzryR1qaIRdqu9LqSYydM99smmibryr7Zv/2KpXKyA==",
+  "dgSpecHash": "IsUvrEBAdk+nxagaIqSNF7JleuTAD1Q01iWZNYSvVH2mMJCRdYUKwE1Zh8wu4MY/WBoZD/nXj+TBfOspzk2ABg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\ClaseAcademy\\.NET\\BooksApi\\BooksApi.csproj",
+  "projectFilePath": "C:\\Projects\\Academy\\.NET\\BooksApi\\BooksApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\brais.suarez\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\brais.suarez\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

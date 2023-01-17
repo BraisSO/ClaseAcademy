@@ -3728,11 +3728,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\ClaseAcademy\\.NET\\BooksApi\\BooksApi.csproj",
+      "projectUniqueName": "C:\\Projects\\Academy\\.NET\\BooksApi\\BooksApi.csproj",
       "projectName": "BooksApi",
-      "projectPath": "C:\\Projects\\ClaseAcademy\\.NET\\BooksApi\\BooksApi.csproj",
+      "projectPath": "C:\\Projects\\Academy\\.NET\\BooksApi\\BooksApi.csproj",
       "packagesPath": "C:\\Users\\brais.suarez\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\ClaseAcademy\\.NET\\BooksApi\\obj\\",
+      "outputPath": "C:\\Projects\\Academy\\.NET\\BooksApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\brais.suarez\\AppData\\Roaming\\NuGet\\NuGet.Config",

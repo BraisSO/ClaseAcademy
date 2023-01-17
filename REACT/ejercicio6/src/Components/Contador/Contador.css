@@ -1,0 +1,21 @@
+h1, div{
+   text-align: center;
+   margin: 0 auto;
+   color: white;
+}
+
+h1{
+    background-color: black;
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button{
+    margin-top: 20px;
+    margin-left: 3px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+}
+
