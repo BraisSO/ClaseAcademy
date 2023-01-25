@@ -6,7 +6,7 @@ export default function Navigation() {
       <div>
           <ul>
               <li>
-                 <Link to='/'>Inicio</Link>
+                 <Link to='/navigation'>Inicio</Link>
               </li>
               <li>
                   <Link to='/save'>Guardar</Link>
