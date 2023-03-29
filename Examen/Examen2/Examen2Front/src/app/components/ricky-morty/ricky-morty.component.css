@@ -1,0 +1,20 @@
+.dropdown{
+    max-width: fit-content;
+    background-color: rgb(170, 147, 16) ;
+    border-radius: 10%;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 1%;
+   
+}
+.dropdown-item:first-child{
+    background-color: rgb(223, 16, 136) ;
+}
+.dropdown-item:last-child{
+    background-color: rgb(17, 161, 48) ;
+}
+
+div{
+    margin: auto;
+    text-align: center;
+}

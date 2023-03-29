@@ -1,0 +1,22 @@
+<div class="dropdown" [class.show]="isDropdownOpen">
+    <button class="btn" type="button" (click)="toggleDropdown()">
+      Selecciona
+    </button>
+    <div class="dropdown-menu" [class.show]="isDropdownOpen" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" (click)="selectOption('aliens')">Aliens</a>
+      <a class="dropdown-item" (click)="selectOption('humans')">Humans</a>
+    </div>
+  </div>
+  
+  <div *ngFor="let character of characterResults">
+    <div *ngIf="selectedOption === 'aliens' && character.species === 'Alien'">
+      <h2>{{ character.name }}</h2>
+      <p>{{ character.gender }}</p>
+      <img [src]="character.image" alt="{{ character.name }}">
+    </div>
+    <div *ngIf="selectedOption === 'humans' && character.species !== 'Alien'">
+      <h2>{{ character.name }}</h2>
+      <p>{{ character.gender }}</p>
+      <img [src]="character.image" alt="{{ character.name }}">
+    </div>
+  </div>

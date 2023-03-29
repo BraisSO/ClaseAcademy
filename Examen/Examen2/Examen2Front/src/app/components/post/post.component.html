@@ -1,0 +1,17 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+
+    </thead>
+    <tbody id="expense-list">
+        <tr *ngFor="let info of infoList; let i=index">
+            <td>{{info.id}}</td>
+            <td>{{info.title}}</td>
+            <td>{{info.body}}</td>
+        </tr>
+    </tbody>
+</table>
